@@ -1,0 +1,70 @@
+################################################################################
+# setup system defaults
+################################################################################
+
+  # Bootloader to use (syslinux / u-boot / bcm2835-bootloader)
+    BOOTLOADER="u-boot"
+
+  # Kernel extra targets to build
+    KERNEL_UBOOT_EXTRA_TARGET=""
+
+  # Kernel to use. values can be:
+  # default:  default mainline kernel
+#    LINUX="${LINUX:-rockchip-4.4}"
+
+################################################################################
+# setup build defaults
+################################################################################
+
+  # Project FLAGS
+    PROJECT_CFLAGS=""
+
+  # SquashFS compression method (gzip / lzo / xz)
+    SQUASHFS_COMPRESSION="lzo"
+
+################################################################################
+# setup project defaults
+################################################################################
+
+  # OpenGL(X) implementation to use (no / mesa)
+    OPENGL="no"
+
+  # Vulkan implementation to use (vulkan-loader / no)
+    VULKAN="no"
+
+  # Displayserver to use (wl / no)
+    DISPLAYSERVER="no"
+
+  # Windowmanager to use (weston / no)
+    WINDOWMANAGER="no"
+
+  # additional Firmware to use (dvb-firmware, misc-firmware, wlan-firmware)
+  # Space separated list is supported,
+  # e.g. FIRMWARE="dvb-firmware misc-firmware wlan-firmware"
+    FIRMWARE="dvb-firmware brcmfmac_sdio-firmware kernel-firmware"
+
+  # build with installer (yes / no)
+    INSTALLER_SUPPORT="no"
+
+  # additional drivers to install:
+  # for a list of additional drivers see packages/linux-drivers
+  # Space separated list is supported,
+  # e.g. ADDITIONAL_DRIVERS="DRIVER1 DRIVER2"
+    ADDITIONAL_DRIVERS=""
+
+  # build and install driver addons (yes / no)
+    DRIVER_ADDONS_SUPPORT="no"
+
+  # driver addons to install:
+  # for a list of additional drivers see packages/linux-driver-addons
+  # Space separated list is supported,
+    DRIVER_ADDONS="crazycat dvb-latest"
+
+  # additional packages to install:
+    ADDITIONAL_PACKAGES="dtc ethmactool emmctool flashrom"
+
+  # use the kernel CEC framework for libcec (yes / no)
+    CEC_FRAMEWORK_SUPPORT="yes"
+
+  # debug tty path
+    DEBUG_TTY="/dev/ttyAML0"
