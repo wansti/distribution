@@ -220,6 +220,37 @@ index 2e1eee819b..50dd4d89bb 100644
  DUMP_FLAGS = -D -x
  
  LDFLAGS=-Bstatic
+diff --git a/arch/arm/cpu/armv8/axg/firmware/scp_task/misc.S b/arch/arm/cpu/armv8/axg/firmware/scp_task/misc.S
+index 9b97da3561..ab4245c4b3 100644
+--- a/arch/arm/cpu/armv8/axg/firmware/scp_task/misc.S
++++ b/arch/arm/cpu/armv8/axg/firmware/scp_task/misc.S
+@@ -1,10 +1,7 @@
+ .text
+ 
+-.syntax unified
+-.code 16
+ 
+ .global bss_init
+-.thumb_func
+ 
+ bss_init:
+ 	mov r0, #0
+diff --git a/arch/arm/cpu/armv8/axg/firmware/scp_task/task_entry.S b/arch/arm/cpu/armv8/axg/firmware/scp_task/task_entry.S
+index dc4b6a3e1d..af015c2412 100644
+--- a/arch/arm/cpu/armv8/axg/firmware/scp_task/task_entry.S
++++ b/arch/arm/cpu/armv8/axg/firmware/scp_task/task_entry.S
+@@ -2,11 +2,8 @@
+ #include "registers.h"
+ 
+ .text
+-.syntax unified
+-.code 16
+ 
+ 	.global task_entry
+-.thumb_func
+ task_entry:
+ 	b secure_task
+ 	b high_task
 diff --git a/arch/arm/cpu/armv8/g12a/firmware/acs/Makefile b/arch/arm/cpu/armv8/g12a/firmware/acs/Makefile
 index 647f1615f8..53a58eb8f0 100644
 --- a/arch/arm/cpu/armv8/g12a/firmware/acs/Makefile
@@ -290,6 +321,37 @@ index 82f31b88bb..db932d29ee 100644
  DUMP_FLAGS = -D -x
  
  ifdef CONFIG_ODROID_COMMON
+diff --git a/arch/arm/cpu/armv8/g12a/firmware/scp_task/misc.S b/arch/arm/cpu/armv8/g12a/firmware/scp_task/misc.S
+index 9b97da3561..ab4245c4b3 100644
+--- a/arch/arm/cpu/armv8/g12a/firmware/scp_task/misc.S
++++ b/arch/arm/cpu/armv8/g12a/firmware/scp_task/misc.S
+@@ -1,10 +1,7 @@
+ .text
+ 
+-.syntax unified
+-.code 16
+ 
+ .global bss_init
+-.thumb_func
+ 
+ bss_init:
+ 	mov r0, #0
+diff --git a/arch/arm/cpu/armv8/g12a/firmware/scp_task/task_entry.S b/arch/arm/cpu/armv8/g12a/firmware/scp_task/task_entry.S
+index dc4b6a3e1d..af015c2412 100644
+--- a/arch/arm/cpu/armv8/g12a/firmware/scp_task/task_entry.S
++++ b/arch/arm/cpu/armv8/g12a/firmware/scp_task/task_entry.S
+@@ -2,11 +2,8 @@
+ #include "registers.h"
+ 
+ .text
+-.syntax unified
+-.code 16
+ 
+ 	.global task_entry
+-.thumb_func
+ task_entry:
+ 	b secure_task
+ 	b high_task
 diff --git a/arch/arm/cpu/armv8/g12b/firmware/acs/Makefile b/arch/arm/cpu/armv8/g12b/firmware/acs/Makefile
 index 647f1615f8..53a58eb8f0 100644
 --- a/arch/arm/cpu/armv8/g12b/firmware/acs/Makefile
@@ -360,6 +422,37 @@ index 82f31b88bb..db932d29ee 100644
  DUMP_FLAGS = -D -x
  
  ifdef CONFIG_ODROID_COMMON
+diff --git a/arch/arm/cpu/armv8/g12b/firmware/scp_task/misc.S b/arch/arm/cpu/armv8/g12b/firmware/scp_task/misc.S
+index 9b97da3561..ab4245c4b3 100644
+--- a/arch/arm/cpu/armv8/g12b/firmware/scp_task/misc.S
++++ b/arch/arm/cpu/armv8/g12b/firmware/scp_task/misc.S
+@@ -1,10 +1,7 @@
+ .text
+ 
+-.syntax unified
+-.code 16
+ 
+ .global bss_init
+-.thumb_func
+ 
+ bss_init:
+ 	mov r0, #0
+diff --git a/arch/arm/cpu/armv8/g12b/firmware/scp_task/task_entry.S b/arch/arm/cpu/armv8/g12b/firmware/scp_task/task_entry.S
+index dc4b6a3e1d..af015c2412 100644
+--- a/arch/arm/cpu/armv8/g12b/firmware/scp_task/task_entry.S
++++ b/arch/arm/cpu/armv8/g12b/firmware/scp_task/task_entry.S
+@@ -2,11 +2,8 @@
+ #include "registers.h"
+ 
+ .text
+-.syntax unified
+-.code 16
+ 
+ 	.global task_entry
+-.thumb_func
+ task_entry:
+ 	b secure_task
+ 	b high_task
 diff --git a/arch/arm/cpu/armv8/gxb/firmware/acs/Makefile b/arch/arm/cpu/armv8/gxb/firmware/acs/Makefile
 index 647f1615f8..53a58eb8f0 100644
 --- a/arch/arm/cpu/armv8/gxb/firmware/acs/Makefile
@@ -461,6 +554,37 @@ index 2e1eee819b..50dd4d89bb 100644
  DUMP_FLAGS = -D -x
  
  LDFLAGS=-Bstatic
+diff --git a/arch/arm/cpu/armv8/gxb/firmware/scp_task/misc.S b/arch/arm/cpu/armv8/gxb/firmware/scp_task/misc.S
+index 9b97da3561..ab4245c4b3 100644
+--- a/arch/arm/cpu/armv8/gxb/firmware/scp_task/misc.S
++++ b/arch/arm/cpu/armv8/gxb/firmware/scp_task/misc.S
+@@ -1,10 +1,7 @@
+ .text
+ 
+-.syntax unified
+-.code 16
+ 
+ .global bss_init
+-.thumb_func
+ 
+ bss_init:
+ 	mov r0, #0
+diff --git a/arch/arm/cpu/armv8/gxb/firmware/scp_task/task_entry.S b/arch/arm/cpu/armv8/gxb/firmware/scp_task/task_entry.S
+index dc4b6a3e1d..af015c2412 100644
+--- a/arch/arm/cpu/armv8/gxb/firmware/scp_task/task_entry.S
++++ b/arch/arm/cpu/armv8/gxb/firmware/scp_task/task_entry.S
+@@ -2,11 +2,8 @@
+ #include "registers.h"
+ 
+ .text
+-.syntax unified
+-.code 16
+ 
+ 	.global task_entry
+-.thumb_func
+ task_entry:
+ 	b secure_task
+ 	b high_task
 diff --git a/arch/arm/cpu/armv8/gxl/firmware/acs/Makefile b/arch/arm/cpu/armv8/gxl/firmware/acs/Makefile
 index 647f1615f8..53a58eb8f0 100644
 --- a/arch/arm/cpu/armv8/gxl/firmware/acs/Makefile
@@ -582,6 +706,37 @@ index 2e1eee819b..50dd4d89bb 100644
  DUMP_FLAGS = -D -x
  
  LDFLAGS=-Bstatic
+diff --git a/arch/arm/cpu/armv8/gxl/firmware/scp_task/misc.S b/arch/arm/cpu/armv8/gxl/firmware/scp_task/misc.S
+index 9b97da3561..ab4245c4b3 100644
+--- a/arch/arm/cpu/armv8/gxl/firmware/scp_task/misc.S
++++ b/arch/arm/cpu/armv8/gxl/firmware/scp_task/misc.S
+@@ -1,10 +1,7 @@
+ .text
+ 
+-.syntax unified
+-.code 16
+ 
+ .global bss_init
+-.thumb_func
+ 
+ bss_init:
+ 	mov r0, #0
+diff --git a/arch/arm/cpu/armv8/gxl/firmware/scp_task/task_entry.S b/arch/arm/cpu/armv8/gxl/firmware/scp_task/task_entry.S
+index dc4b6a3e1d..af015c2412 100644
+--- a/arch/arm/cpu/armv8/gxl/firmware/scp_task/task_entry.S
++++ b/arch/arm/cpu/armv8/gxl/firmware/scp_task/task_entry.S
+@@ -2,11 +2,8 @@
+ #include "registers.h"
+ 
+ .text
+-.syntax unified
+-.code 16
+ 
+ 	.global task_entry
+-.thumb_func
+ task_entry:
+ 	b secure_task
+ 	b high_task
 diff --git a/arch/arm/cpu/armv8/gxtvbb/firmware/acs/Makefile b/arch/arm/cpu/armv8/gxtvbb/firmware/acs/Makefile
 index 647f1615f8..53a58eb8f0 100644
 --- a/arch/arm/cpu/armv8/gxtvbb/firmware/acs/Makefile
@@ -683,6 +838,37 @@ index 2e1eee819b..50dd4d89bb 100644
  DUMP_FLAGS = -D -x
  
  LDFLAGS=-Bstatic
+diff --git a/arch/arm/cpu/armv8/gxtvbb/firmware/scp_task/misc.S b/arch/arm/cpu/armv8/gxtvbb/firmware/scp_task/misc.S
+index 9b97da3561..ab4245c4b3 100644
+--- a/arch/arm/cpu/armv8/gxtvbb/firmware/scp_task/misc.S
++++ b/arch/arm/cpu/armv8/gxtvbb/firmware/scp_task/misc.S
+@@ -1,10 +1,7 @@
+ .text
+ 
+-.syntax unified
+-.code 16
+ 
+ .global bss_init
+-.thumb_func
+ 
+ bss_init:
+ 	mov r0, #0
+diff --git a/arch/arm/cpu/armv8/gxtvbb/firmware/scp_task/task_entry.S b/arch/arm/cpu/armv8/gxtvbb/firmware/scp_task/task_entry.S
+index dc4b6a3e1d..af015c2412 100644
+--- a/arch/arm/cpu/armv8/gxtvbb/firmware/scp_task/task_entry.S
++++ b/arch/arm/cpu/armv8/gxtvbb/firmware/scp_task/task_entry.S
+@@ -2,11 +2,8 @@
+ #include "registers.h"
+ 
+ .text
+-.syntax unified
+-.code 16
+ 
+ 	.global task_entry
+-.thumb_func
+ task_entry:
+ 	b secure_task
+ 	b high_task
 diff --git a/arch/arm/cpu/armv8/tl1/firmware/acs/Makefile b/arch/arm/cpu/armv8/tl1/firmware/acs/Makefile
 index 647f1615f8..53a58eb8f0 100644
 --- a/arch/arm/cpu/armv8/tl1/firmware/acs/Makefile
@@ -753,6 +939,37 @@ index b108bf2062..3eb57d360c 100644
  DUMP_FLAGS = -D -x
  
  LDFLAGS=-Bstatic
+diff --git a/arch/arm/cpu/armv8/tl1/firmware/scp_task/misc.S b/arch/arm/cpu/armv8/tl1/firmware/scp_task/misc.S
+index 9b97da3561..ab4245c4b3 100644
+--- a/arch/arm/cpu/armv8/tl1/firmware/scp_task/misc.S
++++ b/arch/arm/cpu/armv8/tl1/firmware/scp_task/misc.S
+@@ -1,10 +1,7 @@
+ .text
+ 
+-.syntax unified
+-.code 16
+ 
+ .global bss_init
+-.thumb_func
+ 
+ bss_init:
+ 	mov r0, #0
+diff --git a/arch/arm/cpu/armv8/tl1/firmware/scp_task/task_entry.S b/arch/arm/cpu/armv8/tl1/firmware/scp_task/task_entry.S
+index dc4b6a3e1d..af015c2412 100644
+--- a/arch/arm/cpu/armv8/tl1/firmware/scp_task/task_entry.S
++++ b/arch/arm/cpu/armv8/tl1/firmware/scp_task/task_entry.S
+@@ -2,11 +2,8 @@
+ #include "registers.h"
+ 
+ .text
+-.syntax unified
+-.code 16
+ 
+ 	.global task_entry
+-.thumb_func
+ task_entry:
+ 	b secure_task
+ 	b high_task
 diff --git a/arch/arm/cpu/armv8/tm2/firmware/acs/Makefile b/arch/arm/cpu/armv8/tm2/firmware/acs/Makefile
 index 647f1615f8..53a58eb8f0 100644
 --- a/arch/arm/cpu/armv8/tm2/firmware/acs/Makefile
@@ -906,6 +1123,37 @@ index 2e1eee819b..50dd4d89bb 100644
  DUMP_FLAGS = -D -x
  
  LDFLAGS=-Bstatic
+diff --git a/arch/arm/cpu/armv8/txhd/firmware/scp_task/misc.S b/arch/arm/cpu/armv8/txhd/firmware/scp_task/misc.S
+index 9b97da3561..ab4245c4b3 100644
+--- a/arch/arm/cpu/armv8/txhd/firmware/scp_task/misc.S
++++ b/arch/arm/cpu/armv8/txhd/firmware/scp_task/misc.S
+@@ -1,10 +1,7 @@
+ .text
+ 
+-.syntax unified
+-.code 16
+ 
+ .global bss_init
+-.thumb_func
+ 
+ bss_init:
+ 	mov r0, #0
+diff --git a/arch/arm/cpu/armv8/txhd/firmware/scp_task/task_entry.S b/arch/arm/cpu/armv8/txhd/firmware/scp_task/task_entry.S
+index dc4b6a3e1d..af015c2412 100644
+--- a/arch/arm/cpu/armv8/txhd/firmware/scp_task/task_entry.S
++++ b/arch/arm/cpu/armv8/txhd/firmware/scp_task/task_entry.S
+@@ -2,11 +2,8 @@
+ #include "registers.h"
+ 
+ .text
+-.syntax unified
+-.code 16
+ 
+ 	.global task_entry
+-.thumb_func
+ task_entry:
+ 	b secure_task
+ 	b high_task
 diff --git a/arch/arm/cpu/armv8/txl/firmware/acs/Makefile b/arch/arm/cpu/armv8/txl/firmware/acs/Makefile
 index 647f1615f8..53a58eb8f0 100644
 --- a/arch/arm/cpu/armv8/txl/firmware/acs/Makefile
@@ -1007,6 +1255,37 @@ index 2e1eee819b..50dd4d89bb 100644
  DUMP_FLAGS = -D -x
  
  LDFLAGS=-Bstatic
+diff --git a/arch/arm/cpu/armv8/txl/firmware/scp_task/misc.S b/arch/arm/cpu/armv8/txl/firmware/scp_task/misc.S
+index 9b97da3561..ab4245c4b3 100644
+--- a/arch/arm/cpu/armv8/txl/firmware/scp_task/misc.S
++++ b/arch/arm/cpu/armv8/txl/firmware/scp_task/misc.S
+@@ -1,10 +1,7 @@
+ .text
+ 
+-.syntax unified
+-.code 16
+ 
+ .global bss_init
+-.thumb_func
+ 
+ bss_init:
+ 	mov r0, #0
+diff --git a/arch/arm/cpu/armv8/txl/firmware/scp_task/task_entry.S b/arch/arm/cpu/armv8/txl/firmware/scp_task/task_entry.S
+index dc4b6a3e1d..af015c2412 100644
+--- a/arch/arm/cpu/armv8/txl/firmware/scp_task/task_entry.S
++++ b/arch/arm/cpu/armv8/txl/firmware/scp_task/task_entry.S
+@@ -2,11 +2,8 @@
+ #include "registers.h"
+ 
+ .text
+-.syntax unified
+-.code 16
+ 
+ 	.global task_entry
+-.thumb_func
+ task_entry:
+ 	b secure_task
+ 	b high_task
 diff --git a/arch/arm/cpu/armv8/txlx/firmware/acs/Makefile b/arch/arm/cpu/armv8/txlx/firmware/acs/Makefile
 index 647f1615f8..53a58eb8f0 100644
 --- a/arch/arm/cpu/armv8/txlx/firmware/acs/Makefile
@@ -1108,6 +1387,67 @@ index 2e1eee819b..50dd4d89bb 100644
  DUMP_FLAGS = -D -x
  
  LDFLAGS=-Bstatic
+diff --git a/arch/arm/cpu/armv8/txlx/firmware/scp_task/misc.S b/arch/arm/cpu/armv8/txlx/firmware/scp_task/misc.S
+index 9b97da3561..ab4245c4b3 100644
+--- a/arch/arm/cpu/armv8/txlx/firmware/scp_task/misc.S
++++ b/arch/arm/cpu/armv8/txlx/firmware/scp_task/misc.S
+@@ -1,10 +1,7 @@
+ .text
+ 
+-.syntax unified
+-.code 16
+ 
+ .global bss_init
+-.thumb_func
+ 
+ bss_init:
+ 	mov r0, #0
+diff --git a/arch/arm/cpu/armv8/txlx/firmware/scp_task/task_entry.S b/arch/arm/cpu/armv8/txlx/firmware/scp_task/task_entry.S
+index dc4b6a3e1d..af015c2412 100644
+--- a/arch/arm/cpu/armv8/txlx/firmware/scp_task/task_entry.S
++++ b/arch/arm/cpu/armv8/txlx/firmware/scp_task/task_entry.S
+@@ -2,11 +2,8 @@
+ #include "registers.h"
+ 
+ .text
+-.syntax unified
+-.code 16
+ 
+ 	.global task_entry
+-.thumb_func
+ task_entry:
+ 	b secure_task
+ 	b high_task
+diff --git a/arch/arm/lib/memcpy.S b/arch/arm/lib/memcpy.S
+index eeaf003529..aa879753b9 100644
+--- a/arch/arm/lib/memcpy.S
++++ b/arch/arm/lib/memcpy.S
+@@ -61,10 +61,8 @@
+ 	.text
+ 
+ /* Prototype: void *memcpy(void *dest, const void *src, size_t n); */
+-	.syntax unified
+ #ifdef CONFIG_SYS_THUMB_BUILD
+ 	.thumb
+-	.thumb_func
+ #endif
+ ENTRY(memcpy)
+ 		cmp	r0, r1
+diff --git a/arch/arm/lib/memset.S b/arch/arm/lib/memset.S
+index 7208f20dda..aa2650fb3e 100644
+--- a/arch/arm/lib/memset.S
++++ b/arch/arm/lib/memset.S
+@@ -15,10 +15,8 @@
+ 	.text
+ 	.align	5
+ 
+-	.syntax unified
+ #ifdef CONFIG_SYS_THUMB_BUILD
+ 	.thumb
+-	.thumb_func
+ #endif
+ ENTRY(memset)
+ 	ands	r3, r0, #3		@ 1 unaligned?
 diff --git a/include/linux/compiler-gcc.h b/include/linux/compiler-gcc.h
 index e057bd2a84..a8a067df87 100644
 --- a/include/linux/compiler-gcc.h
